@@ -1,6 +1,11 @@
 version: 0.2
 phases:
-    build:
+  install:
+    runtime-versions:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt -t lib
+  build:
     commands:
       - echo "Zipping deployment package..."
       - cd lib
